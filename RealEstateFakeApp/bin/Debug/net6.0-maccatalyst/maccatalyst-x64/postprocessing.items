@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <_PostProcessingItem Include="RealEstateFakeApp.app/Contents/MacOS/RealEstateFakeApp">
+      <BCSymbolMapName>RealEstateFakeApp.bcsymbolmap</BCSymbolMapName>
+      <NoDSymUtil>true</NoDSymUtil>
+      <dSYMSourcePathExists>false</dSYMSourcePathExists>
+      <NoSymbolStrip>true</NoSymbolStrip>
+      <dSYMInfoPlistRelativePath>RealEstateFakeApp.app.dSYM\Contents\Info.plist</dSYMInfoPlistRelativePath>
+      <SymbolFile>/Users/luissandoval/Projects/laboratorio-netmaui-ui-reservas-wip/RealEstateFakeApp/obj/Debug/net6.0-maccatalyst/maccatalyst-x64/mtouch-symbols.list</SymbolFile>
+      <DSymName>RealEstateFakeApp.app.dSYM</DSymName>
+      <SourceProjectPath>/Users/luissandoval/Projects/laboratorio-netmaui-ui-reservas-wip/RealEstateFakeApp</SourceProjectPath>
+    </_PostProcessingItem>
+  </ItemGroup>
+</Project>

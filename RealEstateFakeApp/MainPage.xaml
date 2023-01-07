@@ -3,33 +3,171 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RealEstateFakeApp.MainPage">
 
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <Style x:Key="LabelOptions" TargetType="Label">
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontSize" Value="16"/>
+                <Setter Property="TextColor" Value="Gray"/>
+                <Setter Property="VerticalTextAlignment" Value="Center"/>
+            </Style>
+
+            <Style x:Key="ImageOptions" TargetType="Image">
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="HeightRequest" Value="20"/>
+                <Setter Property="HeightRequest" Value="20"/>
+                <Setter Property="Margin" Value="0,0,20,0"/>
+            </Style>
+
+        </ResourceDictionary>
+
+    </ContentPage.Resources>
+
     <ScrollView>
-         <ScrollView>
-        <Grid RowDefinitions="Auto,*"> 
-            <Image Grid.Row="0" Source="room" HeightRequest="390"  Margin="0,-50,0,0" Aspect="Center"/>
-          
-                <Frame Grid.Row="1" BackgroundColor="White" BorderColor="Transparent" Padding="20,10" Margin="0,0,0,0" HasShadow="False" VerticalOptions="FillAndExpand">
-                <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto" RowSpacing="10" ColumnDefinitions="Auto,Auto,Auto,Auto,Auto,Auto" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand">
-                    <!-- Title-->
-                    <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" Text="Exclusive, serviced, all bills &#10;included. City View" FontSize="20" Padding="0,0,0,20"/>
-                    <!-- Description-->
-                    <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="6" TextColor="Silver" FontSize="15"  LineHeight="1.5" Text="Project Villa El Salvador is located in JI. Pantai&#10;Pererenan which is a charming seaside village &#10;offering a picturesque mix of green rice fields&#10;and great surf spots with the famous beach."/>
-                    <Frame Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="6"  BorderColor="Transparent" HeightRequest="80" HasShadow="False" CornerRadius="10" BackgroundColor="#797a87" Margin="0,20">
-                        <Grid RowDefinitions="Auto,Auto" ColumnDefinitions="Auto,*" VerticalOptions="Center">
-                            <Image Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"  HeightRequest="60" WidthRequest="60" Source="User" Margin="0,0,20,0"/>
-                            <Label Grid.Row="0" Grid.Column="1" Text="Esther Howard" VerticalTextAlignment="End" FontAttributes="Bold"/>
-                            <Label Grid.Row="1" Grid.Column="1" Text="Betterhomes Real Estate" TextColor="#797a87" />
+        <Grid RowDefinitions="Auto,*">
+            <Image Grid.Row="0" Source="room" HeightRequest="390"  Margin="0,-50,0,0" Aspect="AspectFill"/>
+            <VerticalStackLayout Margin="0,0,10,0" Grid.Row="0">
+                <Grid RowSpacing="2" RowDefinitions="*,*">
+                    <Button Padding="3"
+                            ImageSource="heart"
+                            VerticalOptions="Start"
+                            HorizontalOptions="EndAndExpand"
+                            BackgroundColor="Grey"
+                            HeightRequest="30"
+                            Grid.Row="0"/>
+
+                    <Button Padding="3"
+                            ImageSource="share"
+                            VerticalOptions="Start"
+                            HorizontalOptions="EndAndExpand"
+                            BackgroundColor="Grey"
+                            HeightRequest="30"
+                            Grid.Row="1"/>
+                </Grid>
+            </VerticalStackLayout>
+            <Button Grid.Row="0"
+                    CornerRadius="15"
+                    WidthRequest="110"
+                    Margin="10,0,0,0"
+                    Text="FEATURED"
+                    TextColor="White"
+                    BackgroundColor="LimeGreen"
+                    HeightRequest="30"
+                    HorizontalOptions="StartAndExpand"
+                    VerticalOptions="Start"/>
+            <Button Grid.Row="0"
+                    CornerRadius="15"
+                    WidthRequest="110"
+                    Margin="0,200,10,0"
+                    Text="14/350"
+                    TextColor="White"
+                    BackgroundColor="Grey"
+                    HeightRequest="30"
+                    HorizontalOptions="EndAndExpand"
+                    VerticalOptions="Center"/>
+            <Frame  Grid.Row="1"
+                    BackgroundColor="White"
+                    BorderColor="Transparent"
+                    Padding="20,10"
+                    Margin="0,-30,0,0"
+                    CornerRadius="40"
+                    HasShadow="False"
+                    VerticalOptions="FillAndExpand">
+                    <Grid RowDefinitions="*,Auto,Auto,Auto,Auto" RowSpacing="10" ColumnDefinitions="Auto,Auto,Auto,Auto,Auto,Auto" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand">
+                        <!-- Title-->
+                        <Label
+                            TextColor="Black"
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="6"
+                            Text="Exclusive, serviced, all bills &#10;included. City View"
+                            FontSize="20"
+                            Padding="0,0,0,20"/>
+                        <!--BUTTONS-->
+                        <VerticalStackLayout
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="6">
+                            <Grid ColumnDefinitions="*,*,*">
+                                <HorizontalStackLayout Grid.Column="0">
+                                    <Image Source="beds" Style="{StaticResource ImageOptions}"/>
+                                    <Label Text="2 beds" Style="{StaticResource LabelOptions}"/>
+                                </HorizontalStackLayout>
+                                <HorizontalStackLayout Grid.Column="1">
+                                    <Image Source="baths" Style="{StaticResource ImageOptions}"/>
+                                    <Label Text="2 baths" Style="{StaticResource LabelOptions}"/>
+                                </HorizontalStackLayout>
+                                <HorizontalStackLayout Grid.Column="2">
+                                    <Image Source="sqfts" Style="{StaticResource ImageOptions}"/>
+                                    <Label Text="2005 sqfts" Style="{StaticResource LabelOptions}"/>
+                                </HorizontalStackLayout>
+                            </Grid>
+                        </VerticalStackLayout>
+                        <!-- Description-->
+                        <Label
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="6"
+                            TextColor="Silver"
+                            FontSize="15"
+                            LineHeight="1.5"
+                            Text="Project Villa El Salvador is located in JI. Pantai&#10;Pererenan which is a charming seaside village &#10;offering a picturesque mix of green rice fields&#10;and great surf spots with the famous beach."/>
+                        <Frame  Grid.Row="3"
+                                Grid.Column="0"
+                                Grid.ColumnSpan="6"
+                                BorderColor="Transparent"
+                                HeightRequest="80"
+                                HasShadow="False"
+                                CornerRadius="10"
+                                BackgroundColor="White"
+                                Margin="0,20">
+
+                        <Grid   RowDefinitions="Auto,Auto"
+                                ColumnDefinitions="Auto,*"
+                                VerticalOptions="Center">
+                            <Image Grid.Row="0"
+                                   Grid.Column="0"
+                                   Grid.RowSpan="2"
+                                   HeightRequest="60"
+                                   WidthRequest="60"
+                                   Source="user"
+                                   Margin="0,0,20,0"/>
+                            <Label Grid.Row="0"
+                                   TextColor="#797a87"
+                                   Grid.Column="1"
+                                   FontSize="14"
+                                   Text="Esther Howard"
+                                   VerticalTextAlignment="End"
+                                   FontAttributes="Bold"/>
+                            <Label Grid.Row="1"
+                                   Grid.Column="1"
+                                   Text="Betterhomes Real Estate"
+                                   TextColor="#797a87" />
                         </Grid> 
                     </Frame>
                     <!-- Price & Message-->
-                    <Label Grid.Row="4"  Grid.Column="0" Grid.ColumnSpan="2" FontSize="25" Text="$449,790" VerticalTextAlignment="Center"/>
-                    <Button Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="3" BackgroundColor="#7655f2" WidthRequest="180" HeightRequest="55" TextColor="Transparent" Text="Message"/>
 
+                    <Label Grid.Row="4"
+                           Grid.Column="0"
+                           Grid.ColumnSpan="2"
+                           FontSize="25"
+                           TextColor="Black"
+                           Text="$449,790"
+                           VerticalTextAlignment="Center"/>
+
+                    <Button Grid.Row="4"
+                            Grid.Column="3"
+                            Grid.ColumnSpan="3"
+                            BackgroundColor="#7655f2"
+                            WidthRequest="180"
+                            HeightRequest="55"
+                            CornerRadius="30"
+                            TextColor="White"
+                            Text="Message"/>
                 </Grid> 
             </Frame>
         </Grid>
     </ScrollView>
-    </ScrollView>
-
 </ContentPage>
 
